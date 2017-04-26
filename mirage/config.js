@@ -48,6 +48,9 @@ export default function() {
     }
   });
 
+  this.get('/rentals/:id', function (db, request) {
+   return { data: rentals.find((rental) => request.params.id === rental.id) };
+ });
   
 }
 
